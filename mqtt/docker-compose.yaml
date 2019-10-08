@@ -3,7 +3,7 @@ version: '2'
 services:
   mqtt:
     image: eclipse-mosquitto
-    hostname: hass-mqtt
+    hostname: mqtt
     container_name: mqtt
     ports:
       - 1883:1883
