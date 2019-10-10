@@ -1,0 +1,19 @@
+---
+version: '2'
+services:
+  sftp:
+    image: atmoz/sftp
+    hostname: sftp
+    container_name: sftp
+    volumes:
+      # Add the public key for passwordless login
+      - "~/.ssh/id_rsa.pub:/home/confluent/.ssh/keys/id_rsa.pub:ro"
+      # Use a docker volume to store the uploaded data outside of the container
+      - "./sftp_upload/:/home/confluent/sftp_upload"
+    ports:
+      - "2222:22"
+    command: confluent:confluent
+    #:::sftp_upload
+
+# sftp example
+# sftp -P 2222 confluent@localhost
