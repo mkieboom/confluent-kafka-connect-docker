@@ -2,6 +2,7 @@
 ### Use-case
 Capturing data using Kafka Connect JDBC source connector from a Postgres database. Events will be pushed into a compacted topic to demonstrate that database updates will result in new events while deleting previous events from the topic.
 
+Detailed blog on using the JDBC source connector:
 https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/
 
 ### Clone the project
