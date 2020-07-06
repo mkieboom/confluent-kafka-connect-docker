@@ -1,7 +1,14 @@
-# Docs
-# https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/
+
+### Use-case
+Capturing data using Kafka Connect JDBC source connector from a Postgres database. Events will be pushed into a compacted topic to demonstrate that database updates will result in new events while deleting previous events from the topic.
+
+https://www.confluent.io/blog/kafka-connect-deep-dive-jdbc-source-connector/
 
 ### Clone the project
+```
+git clone https://github.com/mkieboom/confluent-kafka-connect-docker
+cd jdbc
+```
 
 ### Launch the environment using docker-compose
 ```
@@ -81,7 +88,6 @@ docker exec postgres psql -U postgres -d postgres -c "update customers set comme
 ```
 docker exec -it schema-registry kafka-avro-console-consumer --bootstrap-server broker:9092 --topic postgrescustomers --from-beginning
 ```
-
 
 ### Cleanup
 ```
