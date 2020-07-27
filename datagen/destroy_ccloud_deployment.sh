@@ -12,7 +12,7 @@ docker volume prune -f
 
 export QUIET=false
 
-export SERVICE_ACCOUNT_ID=92648
+export SERVICE_ACCOUNT_ID=92758
 export ENVIRONMENT_NAME=mkieboom-cicd-env
 export CLUSTER_NAME=mkieboom-cicd-gcp
 export CLUSTER_CLOUD=gcp
@@ -24,7 +24,6 @@ export SCHEMA_REGISTRY_GEO=eu
 export CLIENT_CONFIG=kafka.config
 
 # Destroy the Confluent Cloud stack
-#ccloud::destroy_ccloud_stack 92044
 ccloud::destroy_ccloud_stack $SERVICE_ACCOUNT_ID
 
 rm -rf delta_configs/
