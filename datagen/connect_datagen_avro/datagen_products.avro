@@ -1,0 +1,44 @@
+{
+    "namespace": "ksql",
+    "name": "products",
+    "type": "record",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "iteration": {
+                        "start": 1,
+                        "step": 1
+                    }
+                }
+            }
+        },
+        {
+            "name": "name",
+            "type": {
+                "type": "string",
+                "arg.properties": {
+                    "options": [
+                    "iPad",
+                    "iPod",
+                    "iPhone",
+                    "iMac",
+                    "MacBook Air",
+                    "MacBook Pro"
+                    ]
+                }
+            }
+        },
+        {
+           "name":"price",
+           "type":{
+              "type":"int",
+              "arg.properties": {
+                    "range": {"min": 250 , "max": 1899}
+              }
+           }
+        }
+    ]
+}

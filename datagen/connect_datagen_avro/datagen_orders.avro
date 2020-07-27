@@ -1,0 +1,47 @@
+{
+    "namespace": "ksql",
+    "name": "orders",
+    "type": "record",
+    "fields": [
+        {
+            "name": "id",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "iteration": {
+                        "start": 1000,
+                        "step": 1
+                    }
+                }
+            }
+        },
+        {
+            "name": "customerid",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {"min": 1 , "max": 10}
+                }
+            }
+        },
+        {
+            "name": "productid",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {"min": 1 , "max": 6}
+                }
+            }
+        },
+        {
+            "name": "quantity",
+            "type": {
+                "type": "int",
+                "arg.properties": {
+                    "range": {"min": 1 , "max": 10}
+                }
+            }
+        }
+
+    ]
+}

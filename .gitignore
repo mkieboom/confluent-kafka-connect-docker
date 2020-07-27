@@ -1,3 +1,10 @@
 
 .DS_Store
 s3/minio*
+datagen/ccloud-generate-cp-configs.sh
+datagen/ccloud_kafka_examples/*
+datagen/ccloud_library.sh
+datagen/cp-all-in-one/
+datagen/delta_configs/*
+datagen/kafka.config
+datagen/start_ccloud_deployment.log
